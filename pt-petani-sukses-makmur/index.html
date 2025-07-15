@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PT Petani Sukses Makmur</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f6fff4;
+      color: #2c3e50;
+    }
+    header {
+      background-color: #2e7d32;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #a5d6a7;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 1rem;
+    }
+    nav a {
+      margin: 0.5rem 1rem;
+      text-decoration: none;
+      color: #1b5e20;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-image: url('https://images.unsplash.com/photo-1604392337370-d2a99c2e3903');
+      background-size: cover;
+      background-position: center;
+      color: white;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #2e7d32;
+    }
+    footer {
+      background-color: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 600px) {
+      .hero {
+        padding: 2rem 1rem;
+        font-size: 90%;
+      }
+    }
+
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    .mySlides {
+      display: none;
+      text-align: center;
+    }
+    .mySlides img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 45%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      background-color: rgba(0,0,0,0.3);
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      transition: 0.3s;
+    }
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PT Petani Sukses Makmur</h1>
+    <p>Bersama Kita Bisa</p>
+  </header>
+
+  <nav>
+    <a href="#beranda">Beranda</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#produk">Produk</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <section class="hero" id="beranda">
+    <h2>Kami menanam dan merawat dengan sepenuh hati</h2>
+    <p>Hadirkan hasil alam terbaik untuk Indonesia</p>
+  </section>
+
+  <section class="section" id="tentang">
+    <h2>Tentang Kami</h2>
+    <p>PT Petani Sukses Makmur adalah perusahaan yang bergerak di bidang pertanian hortikultura, fokus pada budidaya melon, semangka, dan tomat ceri. Dengan dedikasi penuh dan teknologi pertanian modern, kami menghasilkan produk berkualitas tinggi yang sehat dan segar.</p>
+  </section>
+
+  <section class="section" id="produk">
+    <h2>Produk Unggulan</h2>
+    <ul>
+      <li><strong>Melon Premium</strong> – Manis, segar, dan kaya vitamin</li>
+      <li><strong>Semangka Segar</strong> – Besar, juicy, dan tanpa biji</li>
+      <li><strong>Tomat Ceri</strong> – Kecil, renyah, dan ideal untuk salad</li>
+    </ul>
+  </section>
+
+  <section class="section" id="galeri">
+    <h2>Galeri Kebun</h2>
+    <div class="slideshow-container">
+      <div class="mySlides"><img src="images/company1.jpeg" alt="Kantor PT Petani Sukses Makmur"></div>
+      <div class="mySlides"><img src="images/greenhouse-1.jpeg" alt="Greenhouse 1"></div>
+      <div class="mySlides"><img src="images/greenhouse-2.jpeg" alt="Greenhouse 2"></div>
+      <div class="mySlides"><img src="images/greenhouse-3.jpeg" alt="Greenhouse 3"></div>
+      <div class="mySlides"><img src="images/penanaman1.jpeg" alt="Penanaman Bibit"></div>
+    </div>
+  </section>
+
+  <section class="section" id="kontak">
+    <h2>Kontak Kami</h2>
+    <p>Email: hrdpetanis@gmail.com</p>
+    <p>Telepon: +62 812-3456-7890</p>
+    <p>Alamat: Ngipa, Kentengrejo, Kec. Purwodadi, Kab. Purworejo, Jawa Tengah, Indonesia</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 PT Petani Sukses Makmur. Semua Hak Dilindungi.</p>
+  </footer>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      const slides = document.getElementsByClassName("mySlides");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 3500);
+    }
+  </script>
+</body>
+</html>
